@@ -29,6 +29,11 @@ namespace xasset.editor
             dependenciesTreeView.ExpandAll();
         }
 
+        private void OnEnable()
+        {
+            Settings.GetDefaultSettings().Initialize();
+        }
+
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
